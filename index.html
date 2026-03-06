@@ -1,0 +1,212 @@
+export default function PlatinumAxisWebsite() {
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <header className="relative overflow-hidden bg-slate-950 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(148,163,184,0.18),transparent_35%),radial-gradient(circle_at_left,rgba(59,130,246,0.12),transparent_30%)]" />
+        <div className="relative mx-auto max-w-7xl px-6 py-8">
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="text-xs uppercase tracking-[0.35em] text-slate-400">Platinum Axis</div>
+              <div className="mt-2 text-2xl font-semibold">Engineering Consulting</div>
+            </div>
+            <nav className="hidden gap-8 text-sm md:flex">
+              <a href="#services" className="transition hover:text-slate-300">Services</a>
+              <a href="#expertise" className="transition hover:text-slate-300">Expertise</a>
+              <a href="#about" className="transition hover:text-slate-300">About</a>
+              <a href="#contact" className="transition hover:text-slate-300">Contact</a>
+            </nav>
+          </div>
+
+          <div className="grid gap-10 py-20 md:grid-cols-2 md:items-center">
+            <div>
+              <div className="mb-4 inline-flex rounded-full border border-slate-700 px-4 py-1 text-xs uppercase tracking-[0.25em] text-slate-300">
+                Chemical Engineering • CFD • Process Scale-Up
+              </div>
+              <h1 className="max-w-2xl text-4xl font-semibold leading-tight md:text-6xl">
+                Strategic process engineering for complex industrial systems.
+              </h1>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+                Platinum Axis supports industrial clients with reactor engineering, mixing analysis,
+                fluid flow troubleshooting, and CFD-driven process optimization.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-slate-950 shadow-lg transition hover:scale-[1.02]"
+                >
+                  Request a Consultation
+                </a>
+                <a
+                  href="#services"
+                  className="rounded-2xl border border-slate-700 px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-900"
+                >
+                  View Services
+                </a>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                ["CFD Modeling", "Reactor hydrodynamics, mixing patterns, dispersion, and scale-up analysis."],
+                ["Process Optimization", "Identify bottlenecks, improve throughput, and reduce energy and operating risk."],
+                ["Troubleshooting", "Diagnose underperforming systems in real industrial environments."],
+                ["Technical Advisory", "Senior-level engineering support for design review and decision making."],
+              ].map(([title, text]) => (
+                <div key={title} className="rounded-3xl border border-slate-800 bg-white/5 p-6 backdrop-blur-sm">
+                  <div className="text-lg font-semibold text-white">{title}</div>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="services" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="max-w-2xl">
+            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Services</div>
+            <h2 className="mt-4 text-3xl font-semibold md:text-4xl">High-value engineering support for demanding operations.</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">
+              Tailored consulting for chemical processing, fluid systems, mixing equipment, water treatment,
+              and scale-up challenges where first-principles engineering and industrial judgment both matter.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "CFD & Fluid Flow",
+                items: ["Mixing studies", "Multiphase flow", "Reactor hydrodynamics", "Velocity and shear analysis"],
+              },
+              {
+                title: "Process Engineering",
+                items: ["Mass and energy balances", "Process debottlenecking", "Equipment review", "Scale-up strategy"],
+              },
+              {
+                title: "Industrial Problem Solving",
+                items: ["Root-cause analysis", "Performance troubleshooting", "Operational improvement", "Technical due diligence"],
+              },
+            ].map((card) => (
+              <div key={card.title} className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+                <h3 className="text-xl font-semibold">{card.title}</h3>
+                <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+                  {card.items.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="expertise" className="bg-white py-20">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Why Platinum Axis</div>
+              <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Technical depth with executive-level perspective.</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                The practice is built around advanced chemical engineering expertise, practical industrial
+                experience, and the ability to communicate complex technical findings in a way decision-makers can use.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  "Reactor engineering",
+                  "Mixing systems",
+                  "Non-ideal flow behavior",
+                  "Scale-up and commercialization",
+                  "Water and wastewater processes",
+                  "Cross-functional technical leadership",
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] bg-slate-950 p-8 text-white shadow-2xl">
+              <div className="text-sm uppercase tracking-[0.25em] text-slate-400">Representative Outcomes</div>
+              <div className="mt-8 space-y-8">
+                {[
+                  ["Faster scale-up decisions", "Reduce uncertainty before capital or process changes are made."],
+                  ["Better equipment performance", "Improve mixing quality, flow distribution, and operating efficiency."],
+                  ["Stronger technical confidence", "Support management with clear engineering rationale and actionable recommendations."],
+                ].map(([title, text]) => (
+                  <div key={title}>
+                    <div className="text-xl font-semibold">{title}</div>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">{text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr]">
+            <div className="rounded-[2rem] bg-slate-900 p-8 text-white shadow-xl">
+              <div className="text-sm uppercase tracking-[0.25em] text-slate-400">Founder</div>
+              <div className="mt-4 text-2xl font-semibold">Panagiotis Athanasiou, PhD</div>
+              <p className="mt-4 text-sm leading-7 text-slate-300">
+                Senior chemical engineer with extensive experience in process engineering, industrial mixing,
+                CFD analysis, reactors, and fluid systems.
+              </p>
+            </div>
+
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">About</div>
+              <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Built for industrial clients who need substance, not generic consulting.</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                Platinum Axis is positioned as a specialist consulting practice for organizations that need
+                technically rigorous support in process design, equipment behavior, flow analysis, and operational improvement.
+              </p>
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Engagements can support project teams, operating plants, technology developers, or business leaders
+                evaluating technical risk and performance.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="bg-slate-950 py-20 text-white">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid gap-10 md:grid-cols-[1fr_0.9fr] md:items-center">
+              <div>
+                <div className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">Contact</div>
+                <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Start with a focused technical discussion.</h2>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+                  For consulting inquiries, technical advisory work, or project-based support, use the contact details below.
+                </p>
+              </div>
+
+              <div className="rounded-[2rem] border border-slate-800 bg-white/5 p-8 backdrop-blur-sm">
+                <div className="space-y-5 text-sm leading-7 text-slate-200">
+                  <div>
+                    <div className="text-slate-400">Email</div>
+                    <div className="text-lg font-medium">info@platinum-axis.com</div>
+                  </div>
+                  <div>
+                    <div className="text-slate-400">Alternate</div>
+                    <div className="text-lg font-medium">panos@platinum-axis.com</div>
+                  </div>
+                  <div>
+                    <div className="text-slate-400">Focus Areas</div>
+                    <div className="text-lg font-medium">CFD • Mixing • Reactors • Process Engineering</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-200 bg-slate-50">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+          <div>© 2026 Platinum Axis Consulting. All rights reserved.</div>
+          <div>Engineering insight for complex processes.</div>
+        </div>
+      </footer>
+    </div>
+  );
+}
